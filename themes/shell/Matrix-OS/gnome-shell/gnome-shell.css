@@ -1,0 +1,325 @@
+/* ============================================================================
+ * MATRIX OS — GNOME Shell 51.1 Theme
+ * Target: Fedora Linux 44 | GNOME Shell 51.1 | Wayland
+ * Hardware: HP EliteBook 830 G5 (Intel UHD Graphics 620)
+ *
+ * Design rules:
+ * - Static CSS only (no backdrop-filter blur, no continuous animations)
+ * - Deep black (#050805 / #0A100B), emerald surface (#101A12), borders (#1D3825)
+ * - Selective neon green (#00FF41) and secondary green (#00C853)
+ * ============================================================================ */
+
+/* Global Stage & Typography */
+stage {
+  font-family: "JetBrains Mono", "JetBrainsMono Nerd Font", monospace;
+  font-size: 10pt;
+  color: #E0F2E9;
+}
+
+/* --------------------------------------------------------------------------
+ * Top Panel
+ * -------------------------------------------------------------------------- */
+#panel {
+  background-color: #050805;
+  border-bottom: 1px solid #1D3825;
+  height: 30px;
+  font-weight: 500;
+}
+
+#panel .panel-button {
+  color: #E0F2E9;
+  border-radius: 6px;
+  margin: 2px 3px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+}
+
+#panel .panel-button:hover {
+  background-color: #101A12;
+  border-color: #1D3825;
+  color: #00FF41;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:overview,
+#panel .panel-button:focus,
+#panel .panel-button:checked {
+  background-color: #101A12;
+  border-color: #00C853;
+  color: #00FF41;
+}
+
+/* Workspace / Activities pill indicator */
+#panel .workspace-dot {
+  background-color: #4CAF50;
+}
+
+#panel .workspace-dot.active {
+  background-color: #00FF41;
+}
+
+/* --------------------------------------------------------------------------
+ * Popover Menus (Calendar, Quick Settings, App Menus)
+ * -------------------------------------------------------------------------- */
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
+  -arrow-background-color: #0A100B;
+  -arrow-border-color: #1D3825;
+  -arrow-border-width: 1px;
+  -arrow-border-radius: 10px;
+}
+
+.popup-menu-content {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.65);
+}
+
+.popup-menu-item {
+  color: #E0F2E9;
+  border-radius: 6px;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item.selected {
+  background-color: #101A12;
+  border-color: #1D3825;
+  color: #00FF41;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
+  background-color: #1D3825;
+  height: 1px;
+}
+
+/* --------------------------------------------------------------------------
+ * Quick Settings (GNOME 43–51)
+ * -------------------------------------------------------------------------- */
+.quick-settings {
+  background-color: #0A100B;
+  border: 1px solid #1D3825;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.quick-toggle,
+.quick-menu-toggle .quick-toggle,
+.quick-menu-toggle .quick-toggle-arrow {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 10px;
+}
+
+.quick-toggle:hover,
+.quick-menu-toggle .quick-toggle:hover,
+.quick-menu-toggle .quick-toggle-arrow:hover {
+  background-color: #162619;
+  border-color: #00C853;
+}
+
+.quick-toggle:checked,
+.quick-menu-toggle .quick-toggle:checked,
+.quick-menu-toggle .quick-toggle-arrow:checked {
+  background-color: #1D3825;
+  border-color: #00FF41;
+  color: #00FF41;
+}
+
+.quick-slider .slider,
+.slider {
+  -barlevel-height: 5px;
+  -barlevel-background-color: #101A12;
+  -barlevel-border-color: #1D3825;
+  -barlevel-border-width: 1px;
+  -barlevel-active-background-color: #00FF41;
+  -barlevel-active-border-color: #00FF41;
+  -slider-handle-radius: 7px;
+  color: #E0F2E9;
+}
+
+/* --------------------------------------------------------------------------
+ * Notifications & Message Tray
+ * -------------------------------------------------------------------------- */
+.notification-banner,
+.message {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+}
+
+.notification-banner:hover,
+.message:hover {
+  background-color: #101A12;
+  border-color: #00C853;
+}
+
+.notification-button,
+.message-close-button {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 6px;
+}
+
+.notification-button:hover,
+.message-close-button:hover {
+  background-color: #1D3825;
+  color: #00FF41;
+}
+
+/* Calendar & Date Menu */
+.calendar {
+  background-color: #0A100B;
+  color: #E0F2E9;
+}
+
+.calendar-day-base {
+  border-radius: 6px;
+  color: #E0F2E9;
+}
+
+.calendar-day-base:hover {
+  background-color: #101A12;
+}
+
+.calendar-today,
+.calendar-today:selected {
+  background-color: #00C853;
+  color: #050805;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+ * Overview, Search & Application Grid
+ * -------------------------------------------------------------------------- */
+#overviewGroup {
+  background-color: #050805;
+}
+
+.search-entry {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 10px;
+  padding: 6px 12px;
+  caret-color: #00FF41;
+}
+
+.search-entry:focus,
+.search-entry:hover {
+  background-color: #101A12;
+  border-color: #00FF41;
+}
+
+.search-section-content {
+  background-color: #0A100B;
+  border: 1px solid #1D3825;
+  border-radius: 10px;
+}
+
+.list-search-result:hover,
+.list-search-result:focus,
+.list-search-result:selected {
+  background-color: #1D3825;
+  color: #00FF41;
+}
+
+.overview-tile,
+.app-well-app .overview-icon,
+.grid-search-result .overview-icon {
+  border-radius: 10px;
+  color: #E0F2E9;
+}
+
+.overview-tile:hover,
+.overview-tile:focus,
+.app-well-app:hover .overview-icon,
+.app-well-app:focus .overview-icon {
+  background-color: #101A12;
+  border: 1px solid #00C853;
+}
+
+.app-well-app-running-dot {
+  background-color: #00FF41;
+  width: 6px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* Window Previews in Overview */
+.window-caption {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.window-close {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+}
+
+.window-close:hover {
+  background-color: #FF5252;
+  color: #050805;
+}
+
+/* --------------------------------------------------------------------------
+ * Dash & Dash-to-Dock Minimal Styling
+ * -------------------------------------------------------------------------- */
+#dash .dash-background,
+#dashtodockContainer #dash .dash-background {
+  background-color: #0A100B;
+  border: 1px solid #1D3825;
+  border-radius: 12px;
+}
+
+#dash .dash-separator {
+  background-color: #1D3825;
+}
+
+/* --------------------------------------------------------------------------
+ * OSD, Alt-Tab Switcher & Modal Dialogs
+ * -------------------------------------------------------------------------- */
+.osd-window,
+.switcher-list,
+.modal-dialog {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+.switcher-list .item-box:selected {
+  background-color: #1D3825;
+  border: 1px solid #00FF41;
+  border-radius: 8px;
+}
+
+.modal-dialog-linked-button {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border-top: 1px solid #1D3825;
+}
+
+.modal-dialog-linked-button:hover {
+  background-color: #1D3825;
+  color: #00FF41;
+}
+
+.modal-dialog-linked-button:last-child {
+  color: #00FF41;
+  font-weight: 600;
+}

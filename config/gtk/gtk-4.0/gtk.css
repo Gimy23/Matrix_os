@@ -1,0 +1,76 @@
+/* ============================================================================
+ * MATRIX OS — GTK4 & Libadwaita User Override (~/.config/gtk-4.0/gtk.css)
+ * Target: Fedora 44 / GNOME 51.1
+ *
+ * NOTE ON LIBADWAITA LIMITATIONS:
+ * Libadwaita applications intentionally define their own styling and ignore
+ * legacy GTK theme packages. This file uses official Libadwaita CSS named
+ * color overrides for non-sandboxed GTK4 apps (e.g., Nautilus, GNOME Text
+ * Editor). Flatpak apps require `xdg-config/gtk-4.0:ro` override to read this,
+ * and apps with custom hardcoded stylesheets may ignore these variables.
+ * ============================================================================ */
+
+@define-color accent_color #00FF41;
+@define-color accent_bg_color #00C853;
+@define-color accent_fg_color #050805;
+
+@define-color destructive_color #FF5252;
+@define-color destructive_bg_color #FF5252;
+@define-color destructive_fg_color #050805;
+
+@define-color success_color #00FF41;
+@define-color success_bg_color #00C853;
+@define-color success_fg_color #050805;
+
+@define-color warning_color #FFD54F;
+@define-color warning_bg_color #FFD54F;
+@define-color warning_fg_color #050805;
+
+@define-color error_color #FF5252;
+@define-color error_bg_color #FF5252;
+@define-color error_fg_color #050805;
+
+@define-color window_bg_color #050805;
+@define-color window_fg_color #E0F2E9;
+
+@define-color view_bg_color #0A100B;
+@define-color view_fg_color #E0F2E9;
+
+@define-color headerbar_bg_color #0A100B;
+@define-color headerbar_fg_color #E0F2E9;
+@define-color headerbar_border_color #1D3825;
+@define-color headerbar_backdrop_color #050805;
+
+@define-color sidebar_bg_color #0A100B;
+@define-color sidebar_fg_color #E0F2E9;
+@define-color sidebar_backdrop_color #050805;
+@define-color sidebar_border_color #1D3825;
+
+@define-color secondary_sidebar_bg_color #050805;
+@define-color secondary_sidebar_fg_color #8FAF99;
+
+@define-color card_bg_color #101A12;
+@define-color card_fg_color #E0F2E9;
+
+@define-color dialog_bg_color #101A12;
+@define-color dialog_fg_color #E0F2E9;
+
+@define-color popover_bg_color #101A12;
+@define-color popover_fg_color #E0F2E9;
+
+@define-color shade_color rgba(0, 0, 0, 0.45);
+@define-color scrollbar_outline_color #1D3825;
+
+/* Subtle static borders for cards, popovers, and Nautilus views */
+window {
+  border: 1px solid #1D3825;
+}
+
+popover > contents {
+  border: 1px solid #1D3825;
+}
+
+.navigation-sidebar > row:selected {
+  background-color: #1D3825;
+  color: #00FF41;
+}

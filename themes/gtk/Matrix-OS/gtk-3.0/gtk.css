@@ -1,0 +1,206 @@
+/* ============================================================================
+ * MATRIX OS — GTK3 Theme (Fedora 44 / GNOME 51.1)
+ * Optimized for Intel UHD Graphics 620: static CSS, no heavy blur/animations
+ * ============================================================================ */
+
+@define-color theme_bg_color #050805;
+@define-color theme_fg_color #E0F2E9;
+@define-color theme_base_color #0A100B;
+@define-color theme_text_color #E0F2E9;
+@define-color theme_selected_bg_color #1D3825;
+@define-color theme_selected_fg_color #00FF41;
+@define-color insensitive_bg_color #0A100B;
+@define-color insensitive_fg_color #4CAF50;
+@define-color borders #1D3825;
+@define-color warning_color #FFD54F;
+@define-color error_color #FF5252;
+@define-color success_color #00C853;
+
+* {
+  outline-color: #00C853;
+  outline-offset: -2px;
+}
+
+window,
+.background {
+  background-color: #050805;
+  color: #E0F2E9;
+}
+
+headerbar,
+.titlebar {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border-bottom: 1px solid #1D3825;
+  box-shadow: none;
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+  background-color: #050805;
+  color: #8FAF99;
+}
+
+button {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 6px;
+  box-shadow: none;
+  padding: 5px 10px;
+}
+
+button:hover {
+  background-color: #162619;
+  border-color: #00C853;
+}
+
+button:active,
+button:checked {
+  background-color: #1D3825;
+  color: #00FF41;
+  border-color: #00FF41;
+}
+
+button.suggested-action {
+  background-color: #00C853;
+  color: #050805;
+  border-color: #00FF41;
+  font-weight: 600;
+}
+
+button.destructive-action {
+  background-color: #FF5252;
+  color: #050805;
+  border-color: #FF5252;
+}
+
+entry,
+textview,
+textview text {
+  background-color: #0A100B;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 6px;
+  caret-color: #00FF41;
+}
+
+entry:focus {
+  border-color: #00FF41;
+}
+
+selection,
+*:selected {
+  background-color: #1D3825;
+  color: #00FF41;
+}
+
+/* Menus & Popovers */
+menu,
+.menu,
+popover,
+popover.background {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+menuitem:hover,
+modelbutton:hover {
+  background-color: #1D3825;
+  color: #00FF41;
+}
+
+/* Sidebars & Lists (Nautilus, File Chooser Dialogs) */
+.sidebar,
+placessidebar,
+placessidebar list,
+treeview.view,
+list,
+.view {
+  background-color: #0A100B;
+  color: #E0F2E9;
+}
+
+.sidebar row:selected,
+placessidebar row:selected,
+list row:selected,
+treeview.view:selected {
+  background-color: #1D3825;
+  color: #00FF41;
+  border-left: 2px solid #00FF41;
+}
+
+/* Notebook / Tabs */
+notebook > header {
+  background-color: #050805;
+  border-bottom: 1px solid #1D3825;
+}
+
+notebook > header > tabs > tab {
+  color: #8FAF99;
+  padding: 6px 12px;
+}
+
+notebook > header > tabs > tab:checked {
+  color: #00FF41;
+  border-bottom: 2px solid #00FF41;
+}
+
+/* Switches & Checkboxes */
+switch {
+  background-color: #101A12;
+  border: 1px solid #1D3825;
+  border-radius: 12px;
+}
+
+switch:checked {
+  background-color: #00C853;
+  border-color: #00FF41;
+}
+
+switch slider {
+  background-color: #E0F2E9;
+  border-radius: 50%;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+  background-color: #00C853;
+  border-color: #00FF41;
+  color: #050805;
+}
+
+/* Scrollbars (minimal, no glow) */
+scrollbar slider {
+  background-color: #1D3825;
+  border-radius: 4px;
+  min-width: 6px;
+  min-height: 6px;
+}
+
+scrollbar slider:hover {
+  background-color: #00C853;
+}
+
+/* Progress bars & Scales */
+progressbar progress,
+scale highlight {
+  background-color: #00FF41;
+}
+
+progressbar trough,
+scale trough {
+  background-color: #101A12;
+  border: 1px solid #1D3825;
+}
+
+/* Tooltips */
+tooltip,
+tooltip.background {
+  background-color: #101A12;
+  color: #E0F2E9;
+  border: 1px solid #1D3825;
+}

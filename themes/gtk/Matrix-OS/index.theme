@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Matrix-OS
+Comment=Lightweight Matrix-inspired dark cybersecurity workstation theme for Fedora 44 / GNOME 51.1
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Matrix-OS
+MetacityTheme=Matrix-OS
+IconTheme=Papirus-Dark
+CursorTheme=Adwaita
+ButtonLayout=appmenu:close
