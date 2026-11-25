@@ -17,26 +17,32 @@ stage {
 }
 
 /* --------------------------------------------------------------------------
- * Top Panel
+ * Top Panel — Floating Capsule Modules (Static CSS, Zero Blur)
  * -------------------------------------------------------------------------- */
-#panel {
-  background-color: #050805;
-  border-bottom: 1px solid #1D3825;
-  height: 30px;
+#panel,
+#panel:overview {
+  background-color: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  height: 36px;
+  padding: 4px 8px 0 8px;
   font-weight: 500;
 }
 
 #panel .panel-button {
+  background-color: #0A100B;
   color: #E0F2E9;
-  border-radius: 6px;
-  margin: 2px 3px;
-  padding: 0 8px;
-  border: 1px solid transparent;
+  border: 1px solid #1D3825;
+  border-radius: 9999px;
+  margin: 0 4px;
+  padding: 0 12px;
+  -natural-hpadding: 12px;
+  -minimum-hpadding: 8px;
 }
 
 #panel .panel-button:hover {
   background-color: #101A12;
-  border-color: #1D3825;
+  border-color: #00C853;
   color: #00FF41;
 }
 
@@ -45,7 +51,7 @@ stage {
 #panel .panel-button:focus,
 #panel .panel-button:checked {
   background-color: #101A12;
-  border-color: #00C853;
+  border-color: #00FF41;
   color: #00FF41;
 }
 
